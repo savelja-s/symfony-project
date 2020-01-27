@@ -1,0 +1,34 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+# the "app_lucky_number" route name is not important yet
+test_page:
+  path: /test/page
+  controller: App\Controller\TestPageController::index
+user_index:
+  path: /user/index
+  controller: App\Controller\UserController::index
+  methods: ['GET']
+user_create:
+  path: /user/create
+  controller: App\Controller\UserController::create
+  methods: ['POST', 'GET']
+user_update:
+  path: /user/update/{id}
+  controller: App\Controller\UserController::update
+  methods: ['PUT', 'GET']
+  requirements:
+    id: '\d+'
+user_view:
+  path: /user/view/{id}
+  controller: App\Controller\UserController::view
+  methods: ['GET']
+  requirements:
+    id: '\d+'
+user_delete:
+  path: /user/delete/{id}
+  controller: App\Controller\UserController::delete
+  methods: ['DELETE']
+  requirements:
+    id: '\d+'

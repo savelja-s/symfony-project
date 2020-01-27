@@ -1,0 +1,7 @@
+docker/data/*
+.env
+.idea/
+.env
+.env.sh
+var/
+vendor/
